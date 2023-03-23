@@ -191,7 +191,8 @@ class Ui_MainWindow(object):
         self.label_5 = QtWidgets.QLabel(self.frame_2)
         self.label_5.setGeometry(QtCore.QRect(600, 140, 191, 211))
         self.label_5.setText("")
-        self.label_5.setPixmap(QtGui.QPixmap("C:/Users/totoh/PycharmProjects/BdLaB/kot.jpg"))
+        mane = os.getcwd()
+        self.label_5.setPixmap(QtGui.QPixmap(mane + "/kot.jpg"))
         self.label_5.setObjectName("label_5")
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -201,9 +202,9 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "This is the base"))
-        self.line_name.setPlaceholderText("Name")
-        self.line_surname.setPlaceholderText("Surname")
-        self.line_patronomyc.setPlaceholderText("Patronymic")
+        self.line_name.setPlaceholderText(" Name")
+        self.line_surname.setPlaceholderText(" Surname")
+        self.line_patronomyc.setPlaceholderText(" Patronymic")
         self.label.setText(_translate("MainWindow", "The added student will be assigned an id:"))
         self.Button_add.setText(_translate("MainWindow", "ADD"))
         self.Select_button.setText(_translate("MainWindow", "Select"))
@@ -255,6 +256,8 @@ class Ui_MainWindow(object):
                     f = open(main_path+i+name, "w")
 
 
+    def add_functions(self):
+        self.file_box.clear
 
 
 
